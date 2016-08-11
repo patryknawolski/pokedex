@@ -1,0 +1,38 @@
+@mixin mq($min: undefined, $max: undefined) {
+	$min-width: if($min != undefined, map-get($breakpoints, $min), undefined);
+	$max-width: if($max != undefined, map-get($breakpoints, $max), undefined);
+
+	$max-width: if($max-width != undefined and $max-width != null, $max-width - 1, $max-width);
+
+	@if $min == undefined and $max == undefined {
+		@warn 'Please pass any parameters.'
+	} @else {
+		@if $min-width == null or $max-width == null {
+			@if $min-width == null and $max-width == null{
+				@warn 'No values could be retrieved from `#{$min}` and `#{$max}` and in `$breakpoints`.';
+			} @else if $min-width == null {
+				@warn 'No value could be retrieved from `#{$min}` in `$breakpoints`.';
+			} @else if $max-width == null {
+				@warn 'No value could be retrieved from `#{$max}` in `$breakpoints`.';
+			}
+		} @else {
+			@if $min-width != undefined and $max-width != undefined {
+				@if ($min-width > $max-width) {
+					@warn 'Your min-width value is bigger than max-width value.'
+				} @else {
+					@media (min-width: $min-width) and (max-width: $max-width) {
+						@content
+					}
+				}
+			} @else if $min-width != undefined {
+				@media (min-width: $min-width) {
+					@content
+				}
+			} @else {
+				@media (max-width: $max-width) {
+					@content
+				}
+			}
+		}
+	}
+}
