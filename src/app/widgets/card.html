@@ -1,8 +1,8 @@
 <div class="c-card">
-  <div class="c-card__top u-bg--grass-poison">
+  <div class="c-card__top u-bg--{{ pokemon.type.join('-') | lowercase }}">
     <div class="c-card__image-wrap">
       <div class="c-card__image">
-        <img src="images/pokemons/ivysaur.jpg">
+        <img ng-src="images/pokemons/{{ pokemon.name | nameToImage }}.jpg">
       </div>
     </div>
   </div>
@@ -10,19 +10,20 @@
     <div class="c-card__left">
       <h2 class="c-card__label">Stats:</h2>
       <ul class="c-card__stats">
-        <li>HP: 60</li>
-        <li>Attack: 62</li>
-        <li>Defense: 63</li>
+        <li>HP: {{ pokemon.stats.hp }}</li>
+        <li>Attack: {{ pokemon.stats.attack }}</li>
+        <li>Defense: {{ pokemon.stats.defense }}</li>
       </ul>
     </div>
     <div class="c-card__right">
       <h2 class="c-card__label">Name:</h2>
-      <h2 class="c-card__name">Ivysaur</h2>
+      <h2 class="c-card__name">{{ pokemon.name }}</h2>
 
       <h2 class="c-card__label">Type:</h2>
       <ul class="c-card__types">
-        <li><div class="c-type u-bg--grass">Grass</div></li>
-        <li><div class="c-type u-bg--poison">Poison</div></li>
+        <li ng-repeat="type in pokemon.type">
+          <div class="c-type u-bg--{{ type | lowercase }}">{{ type }}</div>
+        </li>
       </ul>
     </div>
   </div>

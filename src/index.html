@@ -15,22 +15,34 @@
   </head>
   <body ng-app="app">
 
-    <ul class="c-cards-list">
-      <li>
-        <card></card>
+    <ul class="c-cards-list" ng-controller="PokemonsController as vm">
+      <li ng-repeat="pokemon in vm.pokemons">
+        <card pokemon="pokemon"></card>
       </li>
     </ul>
 
     <!-- build:js js/app.min.js -->
     <script src="bower_components/angular/angular.js"></script>
 
-    <!-- Bootstrapping -->
+    <!-- bootstrapping -->
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
 
-    <!-- Widgets -->
+    <!-- core -->
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/data.factory.js"></script>
+
+    <!-- core -->
+    <script src="app/filters/filters.module.js"></script>
+    <script src="app/filters/name-to-image.filter.js"></script>
+
+    <!-- widgets -->
     <script src="app/widgets/widgets.module.js"></script>
     <script src="app/widgets/card.directive.js"></script>
+
+    <!-- pokemons -->
+    <script src="app/pokemons/pokemons.module.js"></script>
+    <script src="app/pokemons/pokemons.controller.js"></script>
     <!-- endbuild -->
   </body>
 </html>

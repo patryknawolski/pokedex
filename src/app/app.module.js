@@ -2,6 +2,11 @@
   angular
     .module('app', [
       // Shared
-      'app.widgets'
+      'app.core',
+      'app.filters',
+      'app.widgets',
+
+      // Feature areas
+      'app.pokemons'
     ])
 })()
