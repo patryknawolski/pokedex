@@ -1,0 +1,16 @@
+html {
+  box-sizing: border-box;
+
+  font-size: 62.50%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	padding: 20px;
+
+	font-family: Helvetica, sans-serif;
+
+	background-color: #f2f2f2;
+}
