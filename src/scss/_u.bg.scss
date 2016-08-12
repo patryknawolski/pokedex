@@ -71,7 +71,107 @@
 		background-color: $color-steel;
 	}
 
+	&--bug-flying {
+		background: linear-gradient(45deg, $color-bug, $color-flying);
+	}
+
+	&--bug-grass {
+		background: linear-gradient(45deg, $color-bug, $color-grass);
+	}
+
+	&--bug-poison {
+		background: linear-gradient(45deg, $color-bug, $color-poison);
+	}
+
+	&--dragon-flying {
+		background: linear-gradient(45deg, $color-dragon, $color-flying);
+	}
+
+	&--electric-flying {
+		background: linear-gradient(45deg, $color-electric, $color-flying);
+	}
+
+	&--electric-steel {
+		background: linear-gradient(45deg, $color-electric, $color-steel);
+	}
+
 	&--grass-poison {
 		background: linear-gradient(45deg, $color-grass, $color-poison);
+	}
+
+	&--grass-psychic {
+		background: linear-gradient(45deg, $color-grass, $color-psychic);
+	}
+
+	&--ground-rock {
+		background: linear-gradient(45deg, $color-ground, $color-rock);
+	}
+
+	&--ghost-poison {
+		background: linear-gradient(45deg, $color-ghost, $color-poison);
+	}
+
+	&--ice-flying {
+		background: linear-gradient(45deg, $color-ice, $color-flying);
+	}
+
+	&--ice-psychic {
+		background: linear-gradient(45deg, $color-ice, $color-psychic);
+	}
+
+	&--fire-flying {
+		background: linear-gradient(45deg, $color-fire, $color-flying);
+	}
+
+	&--normal-fairy {
+		background: linear-gradient(45deg, $color-normal, $color-fairy);
+	}
+
+	&--normal-flying {
+		background: linear-gradient(45deg, $color-normal, $color-flying);
+	}
+
+	&--poison-flying {
+		background: linear-gradient(45deg, $color-poison, $color-flying);
+	}
+
+	&--poison-ground {
+		background: linear-gradient(45deg, $color-poison, $color-ground);
+	}
+
+	&--psychic-fairy {
+		background: linear-gradient(45deg, $color-psychic, $color-fairy);
+	}
+
+	&--rock-flying {
+		background: linear-gradient(45deg, $color-rock, $color-flying);
+	}
+
+	&--rock-ground {
+		background: linear-gradient(45deg, $color-rock, $color-ground);
+	}
+
+	&--rock-water {
+		background: linear-gradient(45deg, $color-rock, $color-water);
+	}
+
+	&--water-fighting {
+		background: linear-gradient(45deg, $color-water, $color-fighting);
+	}
+
+	&--water-flying {
+		background: linear-gradient(45deg, $color-water, $color-flying);
+	}
+
+	&--water-ice {
+		background: linear-gradient(45deg, $color-water, $color-fighting);
+	}
+
+	&--water-poison {
+		background: linear-gradient(45deg, $color-water, $color-poison);
+	}
+
+	&--water-psychic {
+		background: linear-gradient(45deg, $color-water, $color-psychic);
 	}
 }
