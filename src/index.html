@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Boilerplate for Angular by @patryknawolski</title>
 
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+
     <!-- build:css css/style.min.css -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,19 +18,32 @@
     <ul class="c-cards-list">
       <li>
         <div class="c-card">
-          <div class="c-card__bg">
+          <div class="c-card__top u-bg--grass-poison">
             <div class="c-card__image-wrap">
               <div class="c-card__image">
-                <img src="images/pokemons/bulbasaur.jpg">
+                <img src="images/pokemons/ivysaur.jpg">
               </div>
             </div>
           </div>
-          <div class="c-card__left">
-            
-          </div>
-          <div class="c-card__right">
-            <h2 class="c-card__name">Bulbasaur</h2>
-            <div class="c-type c-type--poison"></div>
+          <div class="c-card__bottom">
+            <div class="c-card__left">
+              <h2 class="c-card__label">Stats:</h2>
+              <ul class="c-card__stats">
+                <li>HP: 60</li>
+                <li>Attack: 62</li>
+                <li>Defense: 63</li>
+              </ul>
+            </div>
+            <div class="c-card__right">
+              <h2 class="c-card__label">Name:</h2>
+              <h2 class="c-card__name">Ivysaur</h2>
+
+              <h2 class="c-card__label">Type:</h2>
+              <ul class="c-card__types">
+                <li><div class="c-type u-bg--grass">Grass</div></li>
+                <li><div class="c-type u-bg--poison">Poison</div></li>
+              </ul>
+            </div>
           </div>
         </div>
       </li>

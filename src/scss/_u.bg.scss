@@ -1,0 +1,13 @@
+.u-bg {
+	&--grass {
+		background-color: $color-grass;	
+	}
+
+	&--poison {
+		background-color: $color-poison;
+	}
+	
+	&--grass-poison {
+		background: linear-gradient(45deg, $color-grass, $color-poison);
+	}
+}

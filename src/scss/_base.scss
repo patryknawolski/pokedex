@@ -1,7 +1,5 @@
 html {
   box-sizing: border-box;
-
-  font-size: 62.50%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -10,7 +8,9 @@ html {
 body {
 	padding: 20px;
 
-	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	color: $color-text;
+	font-family: 'VT323';
 
-	background-color: #f2f2f2;
+	background-color: $color-bg;
 }

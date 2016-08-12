@@ -1,5 +1,5 @@
-$_left-width: 40%;
-$_image-width: $_left-width;
+$_left-width: 45%;
+$_image-width: 35%;
 
 .c-cards-list {
 	display: flex;
@@ -14,30 +14,39 @@ $_image-width: $_left-width;
 
 .c-card {
 	width: 100%;
-	border-radius: 5px;
+	overflow: hidden;
 
-	&__bg {
+	border-radius: 5px;
+	background-color: #fff;
+
+	&__top {
 		height: 100px;
 		position: relative;
 
 		background-color: green;		
 	}
 
-	&__left {
-		float: left;
-		height: 200px;
-		width: $_left-width;
-		position: relative;
-		padding-top: $_image-width / 2;
+	&__bottom {
+		display: flex;
+	}
 
-		background-color: blue;
+	&__left {
+		flex: 0 0 $_left-width;
+		padding-top: $_image-width / 2;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		position: relative;
+
+		border-right: 1px solid #dadada;
 	}
 
 	&__right {
-		height: 100px;
+		flex: 0 0 $_image-width / 2;
 		padding-top: $_image-width / 2;
-
-		background: red;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: $_image-width / 2;
 	}
 
 	&__image-wrap {
@@ -45,14 +54,15 @@ $_image-width: $_left-width;
 		padding: 10px;
 		position: absolute;
 		top: 100%;
-		left: $_left-width / 2;
+		left: $_left-width;
 		z-index: 1;
 		overflow: hidden;
 
 		border-radius: 50%;
 		background-color: #fff;
+		box-shadow: 0 5px 13px rgba(0, 0, 0, .25);
 
-		transform: translateY(-50%);
+		transform: translate(-60%, -50%);
 	}
 
 	&__image {
@@ -68,9 +78,36 @@ $_image-width: $_left-width;
 		}
 	}
 
-	&__name {
-		font-size: 16px;
-		font-size: 1.6rem;
-		text-align: center;
+	&__label {
+		margin: $base-line 0;
+
+		font-size: 18px;
+		line-height: $base-line * 2;
 	}
+
+	&__stats {
+		font-size: 15px;
+		line-height: $base-line * 2;
+	}
+
+	&__name {
+		margin: $base-line 0 $base-line * 2;
+
+		font-size: 20px;
+		line-height: $base-line * 2;
+	}
+
+	&__types {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: -6px;
+		margin-left: -6px;
+		> li {
+			padding-top: 6px;
+			padding-left: 6px;
+		}
+	}
+
+	// grass: #69c23d
+	// posion: #923a92
 }
