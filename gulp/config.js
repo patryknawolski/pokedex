@@ -5,6 +5,7 @@ module.exports = {
 	styles: {
 		src: 'src/scss/**/*.scss',
 		tmp: 'src/css',
+		compiled: 'src/css/style.css',
 		build: 'build/css'
 	},
 

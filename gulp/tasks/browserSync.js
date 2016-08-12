@@ -11,8 +11,8 @@ gulp.task('browserSync', function () {
 
   gulp.watch(config.views.index).on('change', browserSync.reload)
 
-  gulp.watch(config.styles.tmp + '/style.css', function () {
-    return gulp.src(config.styles.tmp + '/style.css')
+  gulp.watch(config.styles.compiled, function () {
+    return gulp.src(config.styles.compiled)
       .pipe(browserSync.stream())
   })
 })
