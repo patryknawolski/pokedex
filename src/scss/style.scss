@@ -2,9 +2,9 @@
 @import 'mixins';
 @import 'base';
 
+// Objects
+@import 'o.bg';
+
 // Components
 @import 'c.card';
 @import 'c.type';
-
-// Utility
-@import 'u.bg';

@@ -1,5 +1,5 @@
 <div class="c-card">
-  <div class="c-card__top u-bg--{{ pokemon.type.join('-') | lowercase }}">
+  <div class="c-card__top o-bg--{{ pokemon.type.join('-') | lowercase }}">
     <div class="c-card__image-wrap">
       <div class="c-card__image">
         <img ng-src="images/pokemons/{{ pokemon.name | nameToImage }}.jpg">
@@ -22,7 +22,7 @@
       <h2 class="c-card__label">Type:</h2>
       <ul class="c-card__types">
         <li ng-repeat="type in pokemon.type">
-          <div class="c-type u-bg--{{ type | lowercase }}">{{ type }}</div>
+          <div class="c-type o-bg--{{ type | lowercase }}">{{ type }}</div>
         </li>
       </ul>
     </div>
