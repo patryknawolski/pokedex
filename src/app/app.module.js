@@ -1,4 +1,7 @@
 ;(function () {
   angular
-    .module('app', [])
+    .module('app', [
+      // Shared
+      'app.widgets'
+    ])
 })()

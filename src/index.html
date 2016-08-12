@@ -17,42 +17,20 @@
 
     <ul class="c-cards-list">
       <li>
-        <div class="c-card">
-          <div class="c-card__top u-bg--grass-poison">
-            <div class="c-card__image-wrap">
-              <div class="c-card__image">
-                <img src="images/pokemons/ivysaur.jpg">
-              </div>
-            </div>
-          </div>
-          <div class="c-card__bottom">
-            <div class="c-card__left">
-              <h2 class="c-card__label">Stats:</h2>
-              <ul class="c-card__stats">
-                <li>HP: 60</li>
-                <li>Attack: 62</li>
-                <li>Defense: 63</li>
-              </ul>
-            </div>
-            <div class="c-card__right">
-              <h2 class="c-card__label">Name:</h2>
-              <h2 class="c-card__name">Ivysaur</h2>
-
-              <h2 class="c-card__label">Type:</h2>
-              <ul class="c-card__types">
-                <li><div class="c-type u-bg--grass">Grass</div></li>
-                <li><div class="c-type u-bg--poison">Poison</div></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <card></card>
       </li>
     </ul>
 
     <!-- build:js js/app.min.js -->
     <script src="bower_components/angular/angular.js"></script>
+
+    <!-- Bootstrapping -->
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
+
+    <!-- Widgets -->
+    <script src="app/widgets/widgets.module.js"></script>
+    <script src="app/widgets/card.directive.js"></script>
     <!-- endbuild -->
   </body>
 </html>
