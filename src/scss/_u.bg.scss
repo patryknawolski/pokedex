@@ -1,12 +1,76 @@
 .u-bg {
+	&--bug {
+		background-color: $color-bug;
+	}
+	
+	&--dark {
+		background-color: $color-dark;
+	}
+
+	&--dragon {
+		background-color: $color-dragon;
+	}
+
+	&--electric {
+		background-color: $color-electric;
+	}
+
+	&--fairy {
+		background-color: $color-fairy;
+	}
+
+	&--flying {
+		background-color: $color-flying;
+	}
+
+	&--fighting {
+		background-color: $color-fighting;
+	}
+
+	&--fire {
+		background-color: $color-fire;
+	}
+
+	&--ghost {
+		background-color: $color-ghost;
+	}
+
 	&--grass {
 		background-color: $color-grass;	
+	}
+
+	&--ground {
+		background-color: $color-ground;
+	}
+
+	&--ice {
+		background-color: $color-ice;
+	}
+
+	&--normal {
+		background-color: $color-normal;
 	}
 
 	&--poison {
 		background-color: $color-poison;
 	}
-	
+
+	&--psychic {
+		background-color: $color-psychic;
+	}
+
+	&--rock {
+		background-color: $color-rock;
+	}
+
+	&--water {
+		background-color: $color-water;
+	}
+
+	&--steel {
+		background-color: $color-steel;
+	}
+
 	&--grass-poison {
 		background: linear-gradient(45deg, $color-grass, $color-poison);
 	}
