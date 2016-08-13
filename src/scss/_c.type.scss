@@ -5,4 +5,91 @@
 	color: #fff;
 
 	height: $base-line * 3;
+
+	&--filter {
+		height: $base-line * 4;
+		padding: 0 11px;
+
+		cursor: pointer;
+		&.is-disabled {
+			height: ($base-line * 4) - 4px;
+			padding: 0 9px;
+
+			background-color: transparent;
+			border: 2px solid;
+			&.o-bg {
+				&--bug {
+					border-color: $color-bug;
+				}
+				
+				&--dark {
+					border-color: $color-dark;
+				}
+
+				&--dragon {
+					border-color: $color-dragon;
+				}
+
+				&--electric {
+					border-color: $color-electric;
+				}
+
+				&--fairy {
+					border-color: $color-fairy;
+				}
+
+				&--flying {
+					border-color: $color-flying;
+				}
+
+				&--fighting {
+					border-color: $color-fighting;
+				}
+
+				&--fire {
+					border-color: $color-fire;
+				}
+
+				&--ghost {
+					border-color: $color-ghost;
+				}
+
+				&--grass {
+					border-color: $color-grass;	
+				}
+
+				&--ground {
+					border-color: $color-ground;
+				}
+
+				&--ice {
+					border-color: $color-ice;
+				}
+
+				&--normal {
+					border-color: $color-normal;
+				}
+
+				&--poison {
+					border-color: $color-poison;
+				}
+
+				&--psychic {
+					border-color: $color-psychic;
+				}
+
+				&--rock {
+					border-color: $color-rock;
+				}
+
+				&--water {
+					border-color: $color-water;
+				}
+
+				&--steel {
+					border-color: $color-steel;
+				}
+			}
+		}
+	}
 }

@@ -1,0 +1,25 @@
+.c-sidebar {
+	width: 280px;
+	height: 100%;
+	padding: 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+
+	color: #fff;
+
+	background-color: $color-pokemon-red;
+
+	&__types {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: -$base-line;
+		margin-left: -10px;
+
+		>li {
+			padding-top: $base-line;
+			padding-left: 10px;
+		}
+	}
+}

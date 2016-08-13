@@ -1,11 +1,12 @@
 angular
   .module('app.pokemons')
-  .controller('PokemonsController', PokemonsController)
+  .controller('CardsListController', CardsListController)
 
 /* ngInject */
-function PokemonsController (dataFactory) {
+function CardsListController (dataFactory) {
   var vm = this
   vm.pokemons = []
+  vm.filter = {}
 
   activate()
 

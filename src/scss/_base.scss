@@ -14,3 +14,10 @@ body {
 
 	background-color: $color-bg;
 }
+
+h2 {
+	margin-bottom: $base-line * 2;
+
+	font-size: 24px;
+	line-height: $base-line * 4;
+}

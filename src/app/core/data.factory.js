@@ -5,7 +5,8 @@ angular
 /* @ngInject */
 function dataFactory ($http, $log) {
   var service = {
-    getPokemons: getPokemons
+    getPokemons: getPokemons,
+    getTypes: getTypes
   }
 
   return service
@@ -21,6 +22,20 @@ function dataFactory ($http, $log) {
 
     function getPokemonsFailed (error) {
       $log.error('XHR failed for getPokemons.\n' + error.data)
+    }
+  }
+
+  function getTypes () {
+    return $http.get('data/types.json')
+      .then(getTypesComplete)
+      .catch(getTypesFailed)
+
+    function getTypesComplete (response) {
+      return response.data
+    }
+
+    function getTypesFailed (error) {
+      $log.error('XHR failed for getTypes.\n' + error.data)
     }
   }
 }
