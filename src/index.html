@@ -15,26 +15,30 @@
   </head>
   <body ng-app="app">
 
-    <div ng-controller="SidebarController as vm">
-        <div class="c-hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <div ng-controller="PokemonsController as vm">
+        <div ng-controller="SidebarController as vm">
+            <div class="c-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="c-sidebar">
+                <h2>Filter by type:</h2>
+                <ul class="c-sidebar__types">
+                    <li ng-repeat="type in vm.types">
+                        <div class="c-type c-type--filter is-disabled o-bg--{{ type }}"
+                             ng-class="{ 'is-unactive': !type.active }">{{ type }}</div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="c-sidebar">
-            <h2>Filter by type:</h2>
-            <ul class="c-sidebar__types">
-                <li ng-repeat="type in vm.types"><div class="c-type c-type--filter is-disabled o-bg--{{ type }}"
-                                                      ng-class="{ 'is-unactive': !type.active }">{{ type }}</div></li>
-            </ul>
-        </div>
-    </div>
 
-    <ul class="c-cards-list" ng-controller="CardsListController as vm">
-      <li ng-repeat="pokemon in vm.pokemons | filter: vm.filter">
-        <card pokemon="pokemon"></card>
-      </li>
-    </ul>
+        <ul class="c-cards-list" ng-controller="CardsListController as vm">
+            <li ng-repeat="pokemon in vm.pokemons | filter: vm.filter">
+                <card pokemon="pokemon"></card>
+            </li>
+        </ul>
+    </div>
 
     <!-- build:js js/app.min.js -->
     <script src="bower_components/angular/angular.js"></script>
@@ -57,6 +61,7 @@
 
     <!-- pokemons -->
     <script src="app/pokemons/pokemons.module.js"></script>
+    <script src="app/pokemons/pokemons.controller.js"></script>
     <script src="app/pokemons/cards-list.controller.js"></script>
     <script src="app/pokemons/sidebar.controller.js"></script>
     <!-- endbuild -->
