@@ -34,7 +34,7 @@
         </div>
 
         <ul class="c-cards-list" ng-controller="CardsListController as vm">
-            <li ng-repeat="pokemon in vm.pokemons | filter: vm.filter">
+            <li ng-repeat="pokemon in vm.pokemons | pokemonsByTypes:vm.filter">
                 <card pokemon="pokemon"></card>
             </li>
         </ul>
@@ -54,6 +54,7 @@
     <!-- core -->
     <script src="app/filters/filters.module.js"></script>
     <script src="app/filters/name-to-image.filter.js"></script>
+    <script src="app/filters/pokemons-by-type.filter.js"></script>
 
     <!-- widgets -->
     <script src="app/widgets/widgets.module.js"></script>

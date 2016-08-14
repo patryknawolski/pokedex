@@ -6,7 +6,7 @@ angular
 function CardsListController (dataFactory) {
   var vm = this
   vm.pokemons = []
-  vm.filter = {}
+  vm.filter = []
 
   activate()
 
