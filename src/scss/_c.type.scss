@@ -12,7 +12,7 @@
 
 		cursor: pointer;
 		&.is-disabled {
-			height: ($base-line * 4) - 4px;
+			height: $base-line * 4;
 			padding: 0 9px;
 
 			background-color: transparent;

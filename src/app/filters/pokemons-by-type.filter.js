@@ -2,22 +2,18 @@ angular
 	.module('app.filters')
   .filter('pokemonsByTypes', function () {
     return function (pokemons, types) {
-      if (types.length === 0) return pokemons
-      var filtered = []
+      if (!types.length) {
+        return pokemons
+      } else {
+        var filtered = pokemons.filter(function (pokemon) {
+          for (var i = 0; i < pokemon.type.length; i++) {
+            var type = pokemon.type[i].toLowerCase()
 
-      for (var i = 0; i < pokemons.length; i++) {
-        var pokemon = pokemons[i]
-        for(var x = 0; x < 1; x++) {
-          var type = pokemon.type[x].toLowerCase()
-          var found = false
-
-          if (!found && types.indexOf(type) > -1) {
-            filtered.push(pokemon)
-            found = true
+            if (types.indexOf(type) > -1) return true
           }
-        }
-      }
+        })
 
-      return filtered
+        return filtered
+      }
     }
   })
