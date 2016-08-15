@@ -23,15 +23,19 @@
 	}
 
 	&__hamburger {
-		position: absolute;
-		top: 0;
-		right: -$hamburger-width;
 		width: $hamburger-width;
 		height: $hamburger-width;
 		padding: 10px;
+		position: absolute;
+		top: 10px;
+		right: -$hamburger-width - 10px;
+
+		border-radius: 50%;
+		background-color: #fff;
 
 		cursor: pointer;
 		transition: transform .3s ease-in-out;
+		box-shadow: $box-shadow;
 
 		@include mq(md) {
 			display: none;
@@ -48,11 +52,9 @@
 		}
 
 		&.is-open {
-			transform: translateX(-$hamburger-width);
+			background-color: #fff;
 			
 			svg {
-				fill: #fff;
-
 				transform: rotate(180deg);
 			}
 		}
