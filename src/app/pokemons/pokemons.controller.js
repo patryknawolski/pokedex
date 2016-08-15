@@ -5,6 +5,7 @@ angular
 /* @ngInject */
 function PokemonsController (dataFactory) {
   var vm = this
+  vm.nameFilter = ''
   vm.pokemons = []
   vm.types = {}
   vm.getActiveTypes = getActiveTypes

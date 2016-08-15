@@ -17,6 +17,9 @@
 
     <div ng-controller="PokemonsController as vm">
         <sidebar>
+            <h2>Filter by name:</h2>
+            <input type="text" ng-model="vm.nameFilter">
+
             <h2>Filter by type:</h2>
             <ul class="c-types-list">
                 <li ng-repeat="(type, props) in vm.types">
@@ -28,7 +31,7 @@
         </sidebar>
 
         <ul class="c-cards-list">
-            <li class="c-cards-list__item" ng-repeat="pokemon in vm.pokemons | pokemonsByTypes:vm.getActiveTypes()">
+            <li class="c-cards-list__item" ng-repeat="pokemon in vm.pokemons | pokemonsByTypes:vm.getActiveTypes() | filter: { name: vm.nameFilter }">
                 <card pokemon="pokemon"></card>
             </li>
             <li class="c-cards-list__filler" ng-repeat="i in [1, 2, 3, 4, 5]"></li>
