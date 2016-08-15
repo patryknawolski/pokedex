@@ -17,17 +17,21 @@
 
     <div ng-controller="PokemonsController as vm">
         <sidebar>
-            <h2>Filter by name:</h2>
-            <input ng-model="vm.nameFilter" class="c-input" type="text">
+            <sidebar-tab title="Filtering">
+                <h2>Filter by name:</h2>
+                <input ng-model="vm.nameFilter" class="c-input" type="text">
 
-            <h2>Filter by type:</h2>
-            <ul class="c-types-list">
-                <li ng-repeat="(type, props) in vm.types">
-                    <div class="c-type c-type--filter o-bg--{{ type }}"
-                         ng-class="{ 'is-disabled': !props.active }"
-                         ng-click="vm.toggleType(type)">{{ type }}</div>
-                </li>
-            </ul>
+                <h2>Filter by type:</h2>
+                <ul class="c-types-list">
+                    <li ng-repeat="(type, props) in vm.types">
+                        <div class="c-type c-type--filter o-bg--{{ type }}"
+                             ng-class="{ 'is-disabled': !props.active }"
+                             ng-click="vm.toggleType(type)">{{ type }}</div>
+                    </li>
+                </ul>
+            </sidebar-tab>
+            <sidebar-tab title="Sorting">
+            </sidebar-tab>
         </sidebar>
 
         <ul class="c-cards-list">
@@ -54,8 +58,11 @@
     <script src="app/filters/name-to-image.filter.js"></script>
     <script src="app/filters/pokemons-by-type.filter.js"></script>
 
+    <!-- layout -->
     <script src="app/layout/layout.module.js"></script>
+    <script src="app/layout/sidebar.controller.js"></script>
     <script src="app/layout/sidebar.directive.js"></script>
+    <script src="app/layout/sidebar-tab.directive.js"></script>
 
     <!-- widgets -->
     <script src="app/widgets/widgets.module.js"></script>

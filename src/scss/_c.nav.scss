@@ -1,7 +1,6 @@
 .c-sidebar {
 	width: $sidebar-width;
 	height: 100%;
-	padding: 20px;
 	position: fixed;
 	top: 0;
 	left: -$sidebar-width;
@@ -57,5 +56,33 @@
 				transform: rotate(180deg);
 			}
 		}
+	}
+
+	&__tabs {
+		display: flex;
+
+		> li {
+			flex: 1 1 auto;
+
+			&.is-active {
+				> a {
+					background-color: $color-pokemon-red;
+				}
+			}
+
+			> a {
+				display: block;
+				padding: 10px;
+
+				color: inherit;
+				text-align: center;
+
+				background-color: scale_color($color-pokemon-red, $lightness: -10%);
+			}
+		}
+	}
+
+	&__tab-content {
+		padding: 20px;
 	}
 }

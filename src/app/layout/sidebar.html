@@ -3,5 +3,12 @@
 	<div class="c-sidebar__hamburger" ng-click="vm.toggle()" ng-class="{ 'is-open': vm.isOpen }">
 	    <ng-include src="'images/pokeball.svg'"></ng-include>
 	</div>
+
+	<ul class="c-sidebar__tabs">
+		<li ng-repeat="tab in vm.tabs" ng-class="{ 'is-active': tab.active }">
+			<a href="" ng-click="vm.selectTab(tab)">{{ tab.title }}</a>
+		</li>
+	</ul>
+
 	<ng-transclude></ng-transclude>
 </div>
