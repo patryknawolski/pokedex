@@ -34,6 +34,8 @@
                 <h2>Sort by:</h2>
                 <select ng-model="vm.orderBy" ng-options="item.label for item in vm.orderByOptions" value="{{ item.name }}">
                 </select>
+                <input id="orderReverse" ng-model="vm.orderReverse" type="checkbox">
+                <label for="orderReverse">Reverse</label>
             </sidebar-tab>
         </sidebar>
 
