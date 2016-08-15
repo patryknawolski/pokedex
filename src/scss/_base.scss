@@ -27,3 +27,35 @@ h2 {
 	font-size: 24px;
 	line-height: $base-line * 4;
 }
+
+input {
+	width: 100%;
+	height: 35px;
+	margin-bottom: 20px;
+	padding: 0 8px 2px;
+
+	color: inherit;
+	font-family: inherit;
+	font-size: 16px;
+
+	background-color: transparent;
+	border-radius: 0;
+	border: 2px solid;
+
+	outline: none;
+}
+
+select {
+	width: 100%;
+	height: 35px;
+
+	color: inherit;
+	font-family: inherit;
+	font-size: 16px;
+
+	background: transparent;
+	border: 2px solid;
+	border-radius: 0;
+
+	outline: none;
+}
