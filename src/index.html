@@ -31,11 +31,14 @@
                 </ul>
             </sidebar-tab>
             <sidebar-tab title="Sorting">
+                <h2>Sort by:</h2>
+                <select ng-model="vm.orderBy" ng-options="item.label for item in vm.orderByOptions" value="{{ item.name }}">
+                </select>
             </sidebar-tab>
         </sidebar>
 
         <ul class="c-cards-list">
-            <li class="c-cards-list__item" ng-repeat="pokemon in vm.pokemons | pokemonsByTypes:vm.getActiveTypes() | filter: { name: vm.nameFilter }">
+            <li class="c-cards-list__item" ng-repeat="pokemon in vm.pokemons | pokemonsByTypes:vm.getActiveTypes() | filter: { name: vm.nameFilter } | orderBy: vm.orderBy.property : vm.orderReverse">
                 <card pokemon="pokemon"></card>
             </li>
             <li class="c-cards-list__filler" ng-repeat="i in [1, 2, 3, 4, 5]"></li>

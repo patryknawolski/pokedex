@@ -6,6 +6,29 @@ angular
 function PokemonsController (dataFactory) {
   var vm = this
   vm.nameFilter = ''
+  vm.orderByOptions = [
+    {
+      label: 'Original'
+    },
+    {
+      label: 'Name',
+      property: 'name'
+    },
+    {
+      label: 'HP',
+      property: 'stats.hp'
+    },
+    {
+      label: 'Attack',
+      property: 'stats.attack'
+    },
+    {
+      label: 'Defense',
+      property: 'stats.defense'
+    }
+  ]
+  vm.orderBy = vm.orderByOptions[0]
+  vm.orderReverse = false
   vm.pokemons = []
   vm.types = {}
   vm.getActiveTypes = getActiveTypes
