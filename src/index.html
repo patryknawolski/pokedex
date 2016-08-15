@@ -33,9 +33,10 @@
         </div>
 
         <ul class="c-cards-list">
-            <li ng-repeat="pokemon in vm.pokemons | pokemonsByTypes:vm.getActiveTypes()">
+            <li class="c-cards-list__item" ng-repeat="pokemon in vm.pokemons | pokemonsByTypes:vm.getActiveTypes()">
                 <card pokemon="pokemon"></card>
             </li>
+            <li class="c-cards-list__filler" ng-repeat="i in [1, 2, 3, 4, 5]"></li>
         </ul>
     </div>
 

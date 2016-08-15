@@ -2,19 +2,22 @@ $_left-width: 45%;
 $_image-width: 35%;
 
 .c-card {
-	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	overflow: hidden;
 
 	border-radius: 5px;
 	background-color: #fff;
 
 	&__top {
-		height: 100px;
+		flex: 0 0 100px;
 		position: relative;	
 	}
 
 	&__bottom {
 		display: flex;
+		flex: 1 0 auto;
 	}
 
 	&__left {
@@ -27,7 +30,7 @@ $_image-width: 35%;
 
 	&__right {
 		flex: 0 1 100%;
-		padding: ($_image-width / 2) 20px;
+		padding: ($_image-width / 2) 20px 20px;
 	}
 
 	&__image-wrap {

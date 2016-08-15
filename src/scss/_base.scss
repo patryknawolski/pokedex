@@ -6,13 +6,15 @@ html {
 }
 
 body {
-	padding-left: $sidebar-width;
-
 	font-size: 16px;
 	color: $color-text;
 	font-family: 'VT323';
 
 	background-color: $color-bg;
+
+	@include mq(md) {
+		padding-left: $sidebar-width;
+	}
 }
 
 h2 {

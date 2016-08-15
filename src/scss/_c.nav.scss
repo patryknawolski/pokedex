@@ -4,12 +4,16 @@
 	padding: 20px;
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: -$sidebar-width;
 	z-index: 1000;
 
 	color: #fff;
 
 	background-color: $color-pokemon-red;
+
+	@include mq(md) {
+		left: 0;
+	}
 
 	&__types {
 		display: flex;
