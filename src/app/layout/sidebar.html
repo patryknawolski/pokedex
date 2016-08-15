@@ -1,0 +1,7 @@
+<div class="c-sidebar"
+	 ng-class="{ 'is-open': vm.isOpen }">
+	<div class="c-sidebar__hamburger" ng-click="vm.toggle()" ng-class="{ 'is-open': vm.isOpen }">
+	    <ng-include src="'images/pokeball.svg'"></ng-include>
+	</div>
+	<ng-transclude></ng-transclude>
+</div>

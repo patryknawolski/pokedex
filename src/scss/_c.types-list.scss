@@ -1,0 +1,11 @@
+.c-types-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: -$base-line;
+	margin-left: -10px;
+
+	>li {
+		padding-top: $base-line;
+		padding-left: 10px;
+	}
+}
