@@ -60,6 +60,10 @@
 
 	&__tabs {
 		display: flex;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
 
 		> li {
 			flex: 1 1 auto;
@@ -71,11 +75,13 @@
 			}
 
 			> a {
-				display: block;
-				padding: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: $sidebar-tab-height;
+				padding: 0 10px;
 
 				color: inherit;
-				text-align: center;
 
 				background-color: scale_color($color-pokemon-red, $lightness: -10%);
 			}
@@ -83,6 +89,8 @@
 	}
 
 	&__tab-content {
-		padding: 20px;
+		height: 100%;
+		padding: (20px + $sidebar-tab-height) 20px 20px;
+		overflow-y: auto;
 	}
 }
