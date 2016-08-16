@@ -1,5 +1,6 @@
 <div class="c-card">
   <div class="c-card__top o-bg--{{ pokemon.type.join('-') | lowercase }}">
+    <span class="c-card__id">{{ pokemon.id }}</span>
     <div class="c-card__image-wrap">
       <div class="c-card__image">
         <img ng-src="images/pokemons/{{ pokemon.name | nameToImage }}.jpg">

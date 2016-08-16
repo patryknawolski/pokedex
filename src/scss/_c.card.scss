@@ -33,6 +33,15 @@ $_image-width: 35%;
 		padding: ($_image-width / 2) 20px 20px;
 	}
 
+	&__id {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+
+		color: #fff;
+		font-size: 20px;
+	}
+
 	&__image-wrap {
 		width: $_image-width;
 		padding: 10px;
