@@ -3,7 +3,7 @@ angular
   .controller('PokemonsController', PokemonsController)
 
 /* @ngInject */
-function PokemonsController (dataFactory) {
+function PokemonsController (dataFactory, pokemonInfoFactory) {
   var vm = this
   vm.nameFilter = ''
   vm.orderByOptions = [
@@ -32,6 +32,7 @@ function PokemonsController (dataFactory) {
   vm.pokemons = []
   vm.types = {}
   vm.getActiveTypes = getActiveTypes
+  vm.showInfo = showInfo
   vm.toggleType = toggleType
 
   activate()
@@ -73,6 +74,10 @@ function PokemonsController (dataFactory) {
     })
 
     return activeTypes
+  }
+
+  function showInfo (pokemon) {
+    pokemonInfoFactory.showInfo(pokemon)
   }
 
   function toggleType (type) {

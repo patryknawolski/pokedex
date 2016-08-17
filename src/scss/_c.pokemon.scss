@@ -1,0 +1,57 @@
+.c-pokemon {
+	&__intro {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 60px;
+
+		color: #fff;
+
+		background-color: $color-pokemon-red;
+
+		@include mq(sm) {
+			height: 80px;
+		}
+	}
+
+	&__name {
+		margin-bottom: $base-line / 2;
+
+		font-size: 21px;
+
+		@include mq(sm) {
+			font-size: 24px;
+		}
+
+		@include mq(md) {
+			font-size: 28px;
+		}
+	}
+
+	&__species {
+		font-size: 14px;
+
+		@include mq(sm) {
+			font-size: 18px;
+		}
+	}
+
+	&__data {
+		padding: 30px 20px;
+	}
+
+	&__img {
+		display: block;
+		max-width: 160px;
+		margin: 0 auto;
+
+		@include mq(sm) {
+			max-width: 200px;
+		}
+
+		@include mq(md) {
+			max-width: 240px;
+		}
+	}
+}

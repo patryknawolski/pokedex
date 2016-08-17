@@ -41,13 +41,13 @@
 
         <ul class="c-cards-list">
             <li class="c-cards-list__item" ng-repeat="pokemon in vm.pokemons | pokemonsByTypes:vm.getActiveTypes() | filter: { name: vm.nameFilter } | orderBy: vm.orderBy.property : vm.orderReverse">
-                <card pokemon="pokemon"></card>
+                <card pokemon="pokemon" ng-click="vm.showInfo(pokemon)"></card>
             </li>
             <li class="c-cards-list__filler" ng-repeat="i in [1, 2, 3, 4, 5]"></li>
         </ul>
     </div>
 
-    <overlay></overlay>
+    <pokemon-info></pokemon-info>
 
     <!-- build:js js/app.min.js -->
     <script src="bower_components/angular/angular.js"></script>
@@ -67,9 +67,6 @@
 
     <!-- layout -->
     <script src="app/layout/layout.module.js"></script>
-    <script src="app/layout/overlay.factory.js"></script>
-    <script src="app/layout/overlay.controller.js"></script>
-    <script src="app/layout/overlay.directive.js"></script>
     <script src="app/layout/sidebar.controller.js"></script>
     <script src="app/layout/sidebar.directive.js"></script>
     <script src="app/layout/sidebar-tab.directive.js"></script>
@@ -81,6 +78,9 @@
     <!-- pokemons -->
     <script src="app/pokemons/pokemons.module.js"></script>
     <script src="app/pokemons/pokemons.controller.js"></script>
+    <script src="app/pokemons/pokemon-info.factory.js"></script>
+    <script src="app/pokemons/pokemon-info.controller.js"></script>
+    <script src="app/pokemons/pokemon-info.directive.js"></script>
     <!-- endbuild -->
   </body>
 </html>

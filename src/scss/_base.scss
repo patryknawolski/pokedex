@@ -21,8 +21,15 @@ a {
 	text-decoration: none;
 }
 
+h1 {
+	margin: ($base-line * 2) 0;
+
+	font-size: 32px;
+	line-height: $base-line * 4;
+} 
+
 h2 {
-	margin-bottom: $base-line * 2;
+	margin: ($base-line * 2) 0;
 
 	font-size: 24px;
 	line-height: $base-line * 4;

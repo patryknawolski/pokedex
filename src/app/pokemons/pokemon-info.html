@@ -1,0 +1,86 @@
+<div ng-if="vm.state.active">
+	<div class="c-modal o-bg--{{ vm.state.pokemon.type.join('-') | lowercase }}">
+		<div class="c-modal__back" ng-click="vm.back()">
+			<ng-include src="'images/back.svg'"></ng-include>
+		</div>
+		<div class="c-modal__inner">
+			<div class="c-pokemon">
+				<div class="c-pokemon__intro">
+					<div class="c-pokemon__name">{{ vm.state.pokemon.name }}</div>
+					<div class="c-pokemon__species">{{ vm.state.pokemon.species }}</div>
+				</div>
+
+				<div class="c-pokemon__data">
+					<img class="c-pokemon__img" ng-src="images/pokemons/{{ vm.state.pokemon.name | nameToImage }}.jpg">
+
+					<div>
+						<h2>Types:</h2>
+			            <ul class="c-types-list">
+			                <li ng-repeat="type in vm.state.pokemon.type">
+			                    <div class="c-type c-type--filter o-bg--{{ type | lowercase }}">{{ type }}</div>
+			                </li>
+			            </ul>
+			        </div>
+
+		            <h2>Stats:</h2>
+		            <ul class="c-stats-list">
+		            	<li>
+				            <div class="c-stat">
+								<div class="c-stat__name">HP:</div>
+								<div class="c-stat__bar">
+									<div class="c-stat__number">{{ vm.state.pokemon.stats.hp }}</div>
+									<div class="c-stat__bar-fill"></div>
+								</div>
+				            </div>
+		            	</li>
+
+		            	<li>
+				            <div class="c-stat">
+								<div class="c-stat__name">Attack:</div>
+								<div class="c-stat__bar">
+									<div class="c-stat__number">{{ vm.state.pokemon.stats.attack }}</div>
+									<div class="c-stat__bar-fill"></div>
+								</div>
+				            </div>
+		            	</li>
+
+		            	<li>
+				            <div class="c-stat">
+								<div class="c-stat__name">Defense:</div>
+								<div class="c-stat__bar">
+									<div class="c-stat__number">{{ vm.state.pokemon.stats.defense }}</div>
+									<div class="c-stat__bar-fill"></div>
+								</div>
+				            </div>
+		            	</li>
+
+		            	<li>
+				            <div class="c-stat">
+								<div class="c-stat__name">Atk speed:</div>
+								<div class="c-stat__bar">
+									<div class="c-stat__number">{{ vm.state.pokemon.stats['sp.atk']}}</div>
+									<div class="c-stat__bar-fill"></div>
+								</div>
+				            </div>
+		            	</li>
+
+		            	<li>
+				            <div class="c-stat">
+								<div class="c-stat__name">Def speed:</div>
+								<div class="c-stat__bar">
+									<div class="c-stat__number">{{ vm.state.pokemon.stats['sp.def'] }}</div>
+									<div class="c-stat__bar-fill"></div>
+								</div>
+				            </div>
+		            	</li>
+		            </ul>
+
+		            <h2>Abilites:</h2>
+		            <ul class="o-list">
+		            	<li ng-repeat="ability in vm.state.pokemon.abilities">{{ ability }}</li>
+		            </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

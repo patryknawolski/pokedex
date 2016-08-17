@@ -1,0 +1,35 @@
+.c-stat {
+	display: flex;
+	align-items: center;
+
+	&__name {
+		width: 90px;
+	}
+
+	&__bar {
+		flex: 1 0 auto;
+		display: flex;
+		align-items: center;
+		height: $base-line * 3;
+		padding: 0 10px;
+		position: relative;
+
+		background-color: $color-pokemon-red;
+	}
+
+	&__bar-fill {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 40px;
+
+		background-color: #52d600;
+	}
+
+	&__number {
+		position: relative;
+		z-index: 1;
+		color: #fff;
+	}
+}

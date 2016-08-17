@@ -1,0 +1,10 @@
+.o-list {
+	> li {
+		margin-bottom: $base-line;
+
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
