@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="app">
+  <body ng-app="app" ng-controller="BodyController as vm" ng-class="{ 'no-scroll': !vm.state.scroll }">
 
     <div ng-controller="PokemonsController as vm">
         <sidebar>
@@ -67,6 +67,8 @@
 
     <!-- layout -->
     <script src="app/layout/layout.module.js"></script>
+    <script src="app/layout/body.factory.js"></script>
+    <script src="app/layout/body.controller.js"></script>
     <script src="app/layout/sidebar.controller.js"></script>
     <script src="app/layout/sidebar.directive.js"></script>
     <script src="app/layout/sidebar-tab.directive.js"></script>

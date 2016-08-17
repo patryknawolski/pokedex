@@ -15,6 +15,10 @@ body {
 	@include mq(md) {
 		padding-left: $sidebar-width;
 	}
+
+	&.no-scroll {
+		overflow-y: hidden;
+	}
 }
 
 a {

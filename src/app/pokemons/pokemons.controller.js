@@ -3,7 +3,7 @@ angular
   .controller('PokemonsController', PokemonsController)
 
 /* @ngInject */
-function PokemonsController (dataFactory, pokemonInfoFactory) {
+function PokemonsController (dataFactory, pokemonInfoFactory, bodyFactory) {
   var vm = this
   vm.nameFilter = ''
   vm.orderByOptions = [
@@ -78,6 +78,7 @@ function PokemonsController (dataFactory, pokemonInfoFactory) {
 
   function showInfo (pokemon) {
     pokemonInfoFactory.showInfo(pokemon)
+    bodyFactory.disallowScroll()
   }
 
   function toggleType (type) {
