@@ -9,6 +9,7 @@
 	&__back {
 		width: 50px;
 		height: 50px;
+		padding: 10px;
 		position: absolute;
 		z-index: 2;
 		left: 10px;
@@ -21,14 +22,10 @@
 		cursor: pointer;
 
 		svg {
-			max-width: 60%;
-			position: absolute;
-			top: 50%;
-			left: 50%;
+			width: 30px;
+			height: 30px;
 
 			fill: #000;
-
-			transform: translate(-50%, -50%);
 		}
 	}
 
