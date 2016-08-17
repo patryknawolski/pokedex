@@ -14,7 +14,7 @@
 					<img class="c-pokemon__img" ng-src="images/pokemons/{{ vm.state.pokemon.name | nameToImage }}.jpg">
 
 					<div>
-						<h2>Types:</h2>
+						<h2>Type:</h2>
 			            <ul class="c-types-list">
 			                <li ng-repeat="type in vm.state.pokemon.type">
 			                    <div class="c-type c-type--filter o-bg--{{ type | lowercase }}">{{ type }}</div>
