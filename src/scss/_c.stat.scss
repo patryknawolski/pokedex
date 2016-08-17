@@ -14,7 +14,7 @@
 		padding: 0 10px;
 		position: relative;
 
-		background-color: $color-pokemon-red;
+		background-color: #c7c7c7;
 	}
 
 	&__bar-fill {
@@ -22,8 +22,6 @@
 		left: 0;
 		top: 0;
 		height: 100%;
-
-		background-color: #52d600;
 	}
 
 	&__number {

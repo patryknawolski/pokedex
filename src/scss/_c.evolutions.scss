@@ -1,0 +1,59 @@
+.c-evolutions-list {
+	@include mq(md) {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	> li {
+		margin-bottom: $base-line * 3;
+
+		&::after {
+			display: block;
+			content: '';
+			display: block;
+			width: 40px;
+			height: 40px;
+			margin: 0 auto;
+
+			background: url('../images/evolue.svg');
+
+			@include mq($max: md) {
+				margin-top: $base-line * 3;
+				transform: rotate(90deg);
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+
+			&::after {
+				content: none;
+			}
+		}
+
+		@include mq(md) {
+			flex: 1 0 auto;
+			display: flex;
+			align-items: center;
+			margin-bottom: 0;
+
+			&:last-child {
+				flex: 0 0 auto;
+			}
+		}
+	}
+}
+
+.c-evolution {
+	&__img {
+		display: block;
+		max-width: 120px;
+		margin: 0 auto $base-line * 2;
+	}
+
+	&__name {
+		font-size: 21px;
+		text-align: center;
+	}
+}
