@@ -1,9 +1,9 @@
 .c-sidebar {
-	width: $sidebar-width;
+	width: $sidebar-width-xs;
 	height: 100%;
 	position: fixed;
 	top: 0;
-	left: -$sidebar-width;
+	left: -$sidebar-width-xs;
 	z-index: 1000;
 
 	color: #fff;
@@ -12,6 +12,11 @@
 	
 	transition: transform .3s ease-in-out;
 
+	@include mq(sm) {
+		width: $sidebar-width;
+		left: -$sidebar-width;
+	}
+ 
 	@include mq(md) {
 		transform: translateX(100%);
 	}
