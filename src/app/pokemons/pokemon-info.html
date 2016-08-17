@@ -5,7 +5,7 @@
 		</div>
 		<div class="c-modal__inner">
 			<div class="c-pokemon">
-				<div class="c-pokemon__intro">
+				<div class="c-pokemon__intro o-bg--{{ vm.state.pokemon.type.join('-') | lowercase }}">
 					<div class="c-pokemon__name">{{ vm.state.pokemon.name }}</div>
 					<div class="c-pokemon__species">{{ vm.state.pokemon.species }}</div>
 				</div>
