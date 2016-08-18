@@ -28,5 +28,10 @@ module.exports = {
 		index: 'src/index.html',
     src: 'src/app/**/*.html',
     build: 'build/app'
+	},
+
+	data: {
+		src: 'src/data/**/*',
+		build: 'build/data'
 	}
 }

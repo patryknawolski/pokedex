@@ -6,7 +6,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('build', function(done) {
-	runSequence(['styles', 'eslint'], 'build-clean', ['build-useref', 'build-views'], ['build-styles', 'build-scripts', 'build-images', 'build-fonts'], function() {
+	runSequence(['styles', 'eslint'], 'build-clean', ['build-useref', 'build-views', 'build-data', 'build-fonts', 'build-images'], ['build-styles', 'build-scripts'], function() {
 		// Fixes the problem of finishing 'build task' too early
 		done();
 	});
