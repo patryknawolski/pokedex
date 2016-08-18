@@ -2,7 +2,7 @@ angular
   .module('app.filters')
   // Changes unusual names to correct image names
   // f.e.: Nidoran♀ => Nidoranf
-  .filter('nameToImage', function () {
+  .filter('normalizePokemonName', function () {
     return function (input) {
       if (!input) return ''
 
@@ -11,6 +11,6 @@ angular
         .replace('♂', 'm')
         .replace(/\W+/g, '')
 
-      return input.toLowerCase()
+      return input
     }
   })

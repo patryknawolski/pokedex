@@ -11,7 +11,7 @@
 				</div>
 
 				<div class="c-pokemon__data">
-					<img class="c-pokemon__img" ng-src="images/pokemons/{{ vm.state.pokemon.name | nameToImage }}.jpg">
+					<img class="c-pokemon__img" ng-src="images/pokemons/{{ vm.state.pokemon.name | normalizePokemonName | lowercase }}.jpg">
 
 					<div>
 						<h2>Type:</h2>
@@ -84,7 +84,7 @@
 		            <ul class="c-evolutions-list">
 		            	<li ng-repeat="evolution in vm.state.pokemon.evolution">
 		            		<div class="c-evolution">
-			            		<img class="c-evolution__img" ng-src="images/pokemons/{{evolution | nameToImage }}.jpg">
+			            		<img class="c-evolution__img" ng-src="images/pokemons/{{evolution | normalizePokemonName | lowercase }}.jpg">
 			            		<div class="c-evolution__name">{{ evolution }}</div>
 		            		</div>
 		            	</li>

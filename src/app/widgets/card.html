@@ -3,7 +3,7 @@
     <span class="c-card__id">{{ pokemon.id }}</span>
     <div class="c-card__image-wrap">
       <div class="c-card__image">
-        <img ng-src="images/pokemons/{{ pokemon.name | nameToImage }}.jpg">
+        <img ng-src="images/pokemons/{{ pokemon.name | normalizePokemonName | lowercase }}.jpg">
       </div>
     </div>
   </div>
