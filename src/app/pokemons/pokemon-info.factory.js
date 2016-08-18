@@ -8,19 +8,19 @@ function pokemonInfoFactory () {
       active: false,
       pokemon: null
     },
-    showInfo: showInfo,
-    hideInfo: hideInfo
+    hideInfo: hideInfo,
+    showInfo: showInfo
   }
 
   return service
 
-  function showInfo (pokemon) {
-    service.state.active = true
-    service.state.pokemon = pokemon
-  }
-
   function hideInfo () {
     service.state.active = false
     service.state.pokemon = null
+  }
+
+  function showInfo (pokemon) {
+    service.state.active = true
+    service.state.pokemon = pokemon
   }
 }
