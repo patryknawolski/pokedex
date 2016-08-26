@@ -4,6 +4,34 @@ A simple Pokédex built with AngularJS that lets you browse pokémons, filter by
 
 I built it for purpose of improving my AngularJS skills. I've tried to stick as much as possible to [John Papa's styleguide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
 
+## Dependencies
+
+- Node
+- Bower
+
+## Installation
+
+After cloning the repository, the following command installs the Javascript dependencies:
+
+    npm install
+    bower install
+    
+## Building and starting the server
+
+Run the following command to build:
+
+    gulp build
+    
+Then run following command to start a server:
+
+    gulp browserSync-build
+
+After the server starts, the application is accessible at the following URL:
+
+    http://localhost:3000
+    
+In case of errors check if you're not running other server at port 3000, if yes, then application will be available at port 3001.
+
 ## LEGAL
 
 ### Pokémon
