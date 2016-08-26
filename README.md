@@ -11,7 +11,7 @@ I built it for purpose of improving my AngularJS skills. I've tried to stick as 
 
 ## Installation
 
-After cloning the repository, the following command installs the Javascript dependencies:
+After cloning the repository, the following commands install the Javascript dependencies:
 
     npm install
     bower install
