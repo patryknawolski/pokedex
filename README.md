@@ -30,7 +30,7 @@ After the server starts, the application is accessible at the following URL:
 
     http://localhost:3000
     
-In case of errors check if you're not running other server at port 3000, if yes, then application will be available at port 3001.
+In case of errors check if you're not running other server at port `3000`, if yes, then application will be available at port `3001`.
 
 ## LEGAL
 
