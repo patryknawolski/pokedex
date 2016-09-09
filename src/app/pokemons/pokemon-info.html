@@ -23,27 +23,13 @@
 			        </div>
 
 		            <h2>Stats:</h2>
-		            <ul class="c-stats-list">
-		            	<li>
-		            		<pokemon-stat name="HP" points="{{ vm.state.pokemon.stats.hp }}" types="vm.state.pokemon.type"></pokemon-stat>
-		            	</li>
-
-		            	<li>
-		            		<pokemon-stat name="Attack" points="{{ vm.state.pokemon.stats.attack }}" types="vm.state.pokemon.type"></pokemon-stat>
-		            	</li>
-
-		            	<li>
-		            		<pokemon-stat name="Defense" points="{{ vm.state.pokemon.stats.defense }}" types="vm.state.pokemon.type"></pokemon-stat>
-		            	</li>
-
-		            	<li>
-		            		<pokemon-stat name="Atk speed" points="{{ vm.state.pokemon.stats['sp.atk'] }}" types="vm.state.pokemon.type"></pokemon-stat>
-		            	</li>
-
-		            	<li>
-		            		<pokemon-stat name="Def speed" points="{{ vm.state.pokemon.stats['sp.def'] }}" types="vm.state.pokemon.type"></pokemon-stat>
-		            	</li>
-		            </ul>
+		            <pokemon-stats types="vm.state.pokemon.type">
+	            		<pokemon-stat name="HP" points="{{ vm.state.pokemon.stats.hp }}"></pokemon-stat>
+	            		<pokemon-stat name="Attack" points="{{ vm.state.pokemon.stats.attack }}"></pokemon-stat>
+	            		<pokemon-stat name="Defense" points="{{ vm.state.pokemon.stats.defense }}"></pokemon-stat>
+	            		<pokemon-stat name="Atk speed" points="{{ vm.state.pokemon.stats['sp.atk'] }}"></pokemon-stat>
+	            		<pokemon-stat name="Def speed" points="{{ vm.state.pokemon.stats['sp.def'] }}"></pokemon-stat>
+		            </pokemon-stats>
 
 		            <h2>Abilites:</h2>
 		            <ul class="o-list">

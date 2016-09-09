@@ -1,9 +1,5 @@
 .c-stats-list {
-	> li {
+	li {
 		margin-bottom: $base-line;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
 	}
 }

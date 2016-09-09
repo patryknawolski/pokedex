@@ -1,7 +1,9 @@
-<div class="c-stat">
-	<div class="c-stat__name">{{ name }}</div>
-	<div class="c-stat__bar">
-		<div class="c-stat__number">{{ points }}</div>
-		<div class="c-stat__bar-fill o-bg--{{ types.join('-') | lowercase }}" style="width: {{ points / 250 * 100 }}%;"></div>
+<li>
+	<div class="c-stat">
+		<div class="c-stat__name">{{ name }}</div>
+		<div class="c-stat__bar">
+			<div class="c-stat__number">{{ points }}</div>
+			<div class="c-stat__bar-fill o-bg--{{ types.join('-') | lowercase }}" style="width: {{ points / highestStatPoints * 100 }}%;"></div>
+		</div>
 	</div>
-</div>
+</li>
