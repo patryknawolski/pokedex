@@ -25,53 +25,23 @@
 		            <h2>Stats:</h2>
 		            <ul class="c-stats-list">
 		            	<li>
-				            <div class="c-stat">
-								<div class="c-stat__name">HP:</div>
-								<div class="c-stat__bar">
-									<div class="c-stat__number">{{ vm.state.pokemon.stats.hp }}</div>
-									<div class="c-stat__bar-fill o-bg--{{ vm.state.pokemon.type.join('-') | lowercase }}" style="width: {{ vm.state.pokemon.stats.hp / 250 * 100}}%"></div>
-								</div>
-				            </div>
+		            		<pokemon-stat name="HP" points="{{ vm.state.pokemon.stats.hp }}" types="vm.state.pokemon.type"></pokemon-stat>
 		            	</li>
 
 		            	<li>
-				            <div class="c-stat">
-								<div class="c-stat__name">Attack:</div>
-								<div class="c-stat__bar">
-									<div class="c-stat__number">{{ vm.state.pokemon.stats.attack }}</div>
-									<div class="c-stat__bar-fill o-bg--{{ vm.state.pokemon.type.join('-') | lowercase }}" style="width: {{ vm.state.pokemon.stats.attack / 250 * 100}}%"></div>
-								</div>
-				            </div>
+		            		<pokemon-stat name="Attack" points="{{ vm.state.pokemon.stats.attack }}" types="vm.state.pokemon.type"></pokemon-stat>
 		            	</li>
 
 		            	<li>
-				            <div class="c-stat">
-								<div class="c-stat__name">Defense:</div>
-								<div class="c-stat__bar">
-									<div class="c-stat__number">{{ vm.state.pokemon.stats.defense }}</div>
-									<div class="c-stat__bar-fill o-bg--{{ vm.state.pokemon.type.join('-') | lowercase }}" style="width: {{ vm.state.pokemon.stats.defense / 250 * 100}}%"></div>
-								</div>
-				            </div>
+		            		<pokemon-stat name="Defense" points="{{ vm.state.pokemon.stats.defense }}" types="vm.state.pokemon.type"></pokemon-stat>
 		            	</li>
 
 		            	<li>
-				            <div class="c-stat">
-								<div class="c-stat__name">Atk speed:</div>
-								<div class="c-stat__bar">
-									<div class="c-stat__number">{{ vm.state.pokemon.stats['sp.atk']}}</div>
-									<div class="c-stat__bar-fill o-bg--{{ vm.state.pokemon.type.join('-') | lowercase }}" style="width: {{ vm.state.pokemon.stats['sp.atk'] / 250 * 100}}%"></div>
-								</div>
-				            </div>
+		            		<pokemon-stat name="Atk speed" points="{{ vm.state.pokemon.stats['sp.atk'] }}" types="vm.state.pokemon.type"></pokemon-stat>
 		            	</li>
 
 		            	<li>
-				            <div class="c-stat">
-								<div class="c-stat__name">Def speed:</div>
-								<div class="c-stat__bar">
-									<div class="c-stat__number">{{ vm.state.pokemon.stats['sp.def'] }}</div>
-									<div class="c-stat__bar-fill o-bg--{{ vm.state.pokemon.type.join('-') | lowercase }}" style="width: {{ vm.state.pokemon.stats['sp.def'] / 250 * 100}}%"></div>
-								</div>
-				            </div>
+		            		<pokemon-stat name="Def speed" points="{{ vm.state.pokemon.stats['sp.def'] }}" types="vm.state.pokemon.type"></pokemon-stat>
 		            	</li>
 		            </ul>
 
